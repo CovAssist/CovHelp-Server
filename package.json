@@ -2,11 +2,12 @@
   "name": "covhelp-server",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "build/index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon index",
-    "start": "node index"
+    "start": "node index",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,10 @@
     "express": "^4.17.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.7"
+    "@types/express": "^4.17.11",
+    "@types/node": "^15.0.1",
+    "nodemon": "^2.0.7",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.4"
   }
 }
