@@ -1,5 +1,6 @@
 import {model,Schema,Model} from "mongoose";
 import {IVolunteer} from "./@types"
+
 const VolunteerSchema:Schema=new Schema({
     email:String,
     name:String,
@@ -8,5 +9,6 @@ const VolunteerSchema:Schema=new Schema({
     city:String,
     state:String,
 })
-const User:Model<IVolunteer>=model("Volunteer",VolunteerSchema)
+
+const User:Model<IVolunteer> = model("Volunteer",VolunteerSchema)
 export default User
