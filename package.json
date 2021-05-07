@@ -21,9 +21,11 @@
   },
   "homepage": "https://github.com/CovAssist/CovHelp-Server#readme",
   "dependencies": {
+    "@types/cors": "^2.8.10",
     "@types/express": "^4.17.11",
     "@types/mongoose": "^5.10.5",
     "@types/node": "^15.0.2",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "mongoose": "^5.12.7",
     "ts-node": "^9.1.1",
