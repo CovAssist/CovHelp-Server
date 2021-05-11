@@ -3,15 +3,19 @@ import mongoose from "mongoose";
 export const connect = async () => {
   try {
     return await mongoose.connect(
-      `${process.env.DB_URI}`,
+      `${process.env.DB_URL}`,
       {
         useNewUrlParser: true,
         useUnifiedTopology: true,
         useCreateIndex: true,
         useFindAndModify: true,
       },
-      () => {
-        console.log("Database connected");
+      (err) => {
+        if (err) {
+          console.log(err);
+        } else {
+          console.log("Database connected");
+        }
       }
     );
   } catch (err) {

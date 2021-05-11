@@ -22,15 +22,15 @@ export default async (req: Request, res: AppResponse) => {
         name: `${req.query.name}`,
         verified: req.query.verified === "true",
       });
-    else volunteers = await Volunteer.find({ verified: true });
-
+    else
+      volunteers = await Volunteer.find({
+        verified: req.query.verified === "true",
+      });
     const count = volunteers.length;
     const start = parseInt(req.query.start as string);
     const end = parseInt(req.query.end as string);
-
     if (end > count - 1) volunteers = volunteers.slice(start);
     else volunteers = volunteers.slice(start, end + 1);
-
     return res.status(200).json({
       data: { data: volunteers, count },
       success: true,

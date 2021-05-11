@@ -1,13 +1,13 @@
-import {Document} from "mongoose"
+import { Document } from "mongoose";
 
-export default interface IMedicines extends Document{
-    Name:String,
-    SupplierContact:String,
-    city:String,
-    State:String,
-    Verified:Boolean,
-    Price:Number,
-    VerificationTime:String,
-    VerifiedBy:String,
-    Delivery:Boolean,
+export default interface IMedicines extends Document {
+  Name: string;
+  SupplierContact: string;
+  city: string;
+  State: string;
+  Verified: boolean;
+  Price: number;
+  VerificationTime: string;
+  VerifiedBy: string;
+  Delivery: boolean;
 }

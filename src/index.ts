@@ -3,6 +3,7 @@ import cors from "cors";
 const app = express();
 import routes from "./routes";
 import { connect } from "./db";
+import { populateDb } from "./testdata";
 app.use(cors());
 app.use("/api", routes);
 connect();
