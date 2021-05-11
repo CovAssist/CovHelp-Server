@@ -1,7 +1,6 @@
 import {Document} from "mongoose"
 
 export default interface IVacantBeds extends Document{
-
     VacantBeds:Number,
     HospitalContact:String,
     HospitalName:String,
@@ -11,6 +10,4 @@ export default interface IVacantBeds extends Document{
     HospitalFees:Number,
     VerificationTime:String,
     VerifiedBy:String,
-
-
 }

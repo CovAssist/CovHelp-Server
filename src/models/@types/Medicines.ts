@@ -1,7 +1,6 @@
 import {Document} from "mongoose"
 
 export default interface IMedicines extends Document{
-    
     Name:String,
     SupplierContact:String,
     city:String,
@@ -11,5 +10,4 @@ export default interface IMedicines extends Document{
     VerificationTime:String,
     VerifiedBy:String,
     Delivery:Boolean,
-
 }
