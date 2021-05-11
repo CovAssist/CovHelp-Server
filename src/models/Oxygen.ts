@@ -2,7 +2,6 @@ import {model,Schema,Model} from "mongoose";
 import {IOxygen} from "./@types"
 
 const OxygenSchema:Schema=new Schema({
-    
     SupplierContact:String,
     city:String,
     State:String,

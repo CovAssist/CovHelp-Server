@@ -4,7 +4,7 @@
   "description": "",
   "main": "build/index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "ts-mocha 'src/**/*.test.ts'",
     "dev": "nodemon -r dotenv/config src/index.ts",
     "start": "ts-node src/index.ts",
     "build": "tsc"
@@ -28,11 +28,19 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "mongoose": "^5.12.7",
+    "ts-mocha": "^8.0.0",
     "ts-node": "^9.1.1",
     "typescript": "^4.2.4"
   },
   "devDependencies": {
+    "@types/chai": "^4.2.18",
+    "@types/mocha": "^8.2.2",
+    "@types/mockingoose": "^2.13.0",
+    "chai": "^4.3.4",
     "dotenv": "^8.2.0",
-    "nodemon": "^2.0.7"
+    "mocha": "^8.4.0",
+    "mockingoose": "^2.15.2",
+    "nodemon": "^2.0.7",
+    "supertest": "^6.1.3"
   }
 }
