@@ -3,7 +3,7 @@ interface ResponseFormat {
   success?: boolean;
   error?: boolean;
   message?: string;
-  data: unknown;
+  data?: unknown;
 }
 type TypedResponse<T> = Omit<Response, "json" | "status"> & {
   json(data: T): TypedResponse<T>;
