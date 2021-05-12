@@ -1,12 +1,12 @@
-import {Document} from "mongoose"
+import { Document } from "mongoose";
 
-export default interface IPatient extends Document{
-    email: String,
-    dob:Date,
-    contact:String,
-    name:String,
-    Hospitalcity:String,
-    Hospital:String,
-    Verified:Boolean,
-    Report:String
+export default interface IPatient extends Document {
+  email: string;
+  dob: string;
+  contact: string;
+  name: string;
+  Hospitalcity: string;
+  Hospital: string;
+  Verified: boolean;
+  Report: string;
 }
