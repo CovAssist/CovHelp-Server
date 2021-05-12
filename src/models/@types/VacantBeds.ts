@@ -2,12 +2,12 @@ import { Document } from "mongoose";
 
 export default interface IVacantBeds extends Document {
   VacantBeds: number;
-  HospitalContact: string;
-  HospitalName: string;
-  Hospitalcity: string;
+  HosContact: string;
+  HosName: string;
+  Hoscity: string;
   State: string;
   Verified: boolean;
-  HospitalFees: number;
+  HosFees: number;
   VerificationTime: string;
   VerifiedBy: string;
 }
