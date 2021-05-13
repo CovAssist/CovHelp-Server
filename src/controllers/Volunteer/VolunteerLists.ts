@@ -7,6 +7,11 @@ export default async (req: Request, res: AppResponse) => {
       message: "Please provide verification status",
       error: true,
     });
+  if (req.query.status === undefined)
+    return res.status(400).json({
+      message: "Please provide query status",
+      error: true,
+    });
 
   if (!req.query.start && !req.query.end)
     return res.status(400).json({
@@ -21,10 +26,12 @@ export default async (req: Request, res: AppResponse) => {
       volunteers = await Volunteer.find({
         name: `${req.query.name}`,
         verified: req.query.verified === "true",
+        status: req.query.status === "true",
       });
     else
       volunteers = await Volunteer.find({
         verified: req.query.verified === "true",
+        status: req.query.status === "true",
       });
     const count = volunteers.length;
     const start = parseInt(req.query.start as string);

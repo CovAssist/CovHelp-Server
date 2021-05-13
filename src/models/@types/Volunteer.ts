@@ -7,4 +7,5 @@ export default interface IVolunteer extends Document {
   city: string;
   state: string;
   verified: boolean;
+  status: boolean;
 }

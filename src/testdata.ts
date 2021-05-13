@@ -21,6 +21,7 @@ export const populateDb = async () => {
     state: "Test",
     email: "a@a.a",
     verified: true,
+    status: true,
   });
   console.log(user);
 };
