@@ -1,7 +1,7 @@
 import { Document } from "mongoose";
 
 export default interface IMedicines extends Document {
-  Name: string;
+  name: string;
   SupplierContact: string;
   city: string;
   State: string;

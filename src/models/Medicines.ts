@@ -2,6 +2,7 @@ import {model,Schema,Model} from "mongoose";
 import {IMedicines} from "./@types"
 
 const MedicinesSchema:Schema=new Schema({
+    name: String,
     SupplierContact:String,
     city:String,
     State:String,

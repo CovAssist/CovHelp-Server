@@ -4,12 +4,12 @@ import {IVacantBeds} from "./@types"
 
 const VacantBedsSchema:Schema=new Schema({
     NumOfVacantBeds:Number,
-    HospitalContact:String,
-    HospitalName:String,
-    Hospitalcity:String,
+    HosContact:String,
+    HosName:String,
+    Hoscity:String,
     State:String,
     Verified:Boolean,
-    HospitalFees:Number,
+    HosFees:Number,
     VerificationTime:String,
     VerifiedBy:String,
 })
