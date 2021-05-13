@@ -1,13 +1,14 @@
 import { Document } from "mongoose";
 
 export default interface IOxygen extends Document {
-  SupplierContact: string;
+  supplierName:string;
+  supplierContact: string;
   city: string;
-  State: string;
-  Verified: boolean;
-  Status: boolean;
-  Price: number;
-  VerificationTime: string;
-  VerifiedBy: string;
-  Delivery: boolean;
+  state: string;
+  verified: boolean;
+  status: boolean;
+  price: number;
+  verificationTime: string;
+  verifiedBy: string;
+  delivery: boolean;
 }

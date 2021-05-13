@@ -15,3 +15,4 @@ app.get("/", (req, res) => {
 app.listen(process.env.PORT || 5000, () => {
   console.log("Server running");
 });
+export default app;

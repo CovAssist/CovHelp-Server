@@ -4,7 +4,7 @@
   "description": "",
   "main": "build/index.ts",
   "scripts": {
-    "test": "ts-mocha 'src/**/*.test.ts'",
+    "test": "ts-mocha -r dotenv/config 'src/**/*.test.ts' --exit --timeout 5000",
     "dev": "nodemon -r dotenv/config src/index.ts",
     "start": "ts-node src/index.ts",
     "build": "tsc"
@@ -34,10 +34,13 @@
   },
   "devDependencies": {
     "@types/chai": "^4.2.18",
+    "@types/faker": "^5.5.5",
     "@types/mocha": "^8.2.2",
     "@types/mockingoose": "^2.13.0",
+    "@types/supertest": "^2.0.11",
     "chai": "^4.3.4",
     "dotenv": "^8.2.0",
+    "faker": "^5.5.3",
     "mocha": "^8.4.0",
     "mockingoose": "^2.15.2",
     "nodemon": "^2.0.7",

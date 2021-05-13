@@ -3,14 +3,14 @@ import {IMedicines} from "./@types"
 
 const MedicinesSchema:Schema=new Schema({
     name: String,
-    SupplierContact:String,
+    supplierContact:String,
     city:String,
-    State:String,
-    Verified:Boolean,
-    Price:Number,
-    VerificationTime:String,
-    VerifiedBy:String,
-    Delivery:Boolean,
+    state:String,
+    verified:Boolean,
+    price:Number,
+    verificationTime:String,
+    verifiedBy:String,
+    delivery:Boolean,
 })
 
 const Medicines:Model<IMedicines> = model("Medicines",MedicinesSchema)

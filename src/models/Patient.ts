@@ -6,10 +6,10 @@ const PatientSchema:Schema=new Schema({
     dob:Date,
     contact:String,
     name:String,
-    Hospitalcity:String,
-    Hospital:String,
-    Verified:Boolean,
-    Report:String
+    hospitalcity:String,
+    hospital:String,
+    verified:Boolean,
+    report:String
 })
 
 const Patient:Model<IPatient> = model("Patient",PatientSchema)

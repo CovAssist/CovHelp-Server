@@ -5,8 +5,8 @@ export default interface IPatient extends Document {
   dob: string;
   contact: string;
   name: string;
-  Hospitalcity: string;
-  Hospital: string;
-  Verified: boolean;
-  Report: string;
+  hospitalcity: string;
+  hospital: string;
+  verified: boolean;
+  report: string;
 }

@@ -3,15 +3,15 @@ import {model,Schema,Model} from "mongoose";
 import {IVacantBeds} from "./@types"
 
 const VacantBedsSchema:Schema=new Schema({
-    NumOfVacantBeds:Number,
-    HosContact:String,
-    HosName:String,
-    Hoscity:String,
-    State:String,
-    Verified:Boolean,
-    HosFees:Number,
-    VerificationTime:String,
-    VerifiedBy:String,
+    numOfBeds:Number,
+    hosContact:String,
+    hosName:String,
+    hoscity:String,
+    state:String,
+    verified:Boolean,
+    hosFees:Number,
+    verificationTime:String,
+    verifiedBy:String,
 })
 
 const VacantBeds:Model<IVacantBeds> = model("VacantBeds",VacantBedsSchema)

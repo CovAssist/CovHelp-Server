@@ -6,7 +6,7 @@ export default interface IDonor extends Document {
   name: string;
   city: string;
   state: string;
-  Recovered: number;
+  recovered: number;
   blood: string;
   date: string;
 }

@@ -8,7 +8,7 @@ const DonorSchema:Schema=new Schema({
     name:String,
     city:String,
     state:String,
-    Recovered:Number,
+    recovered:Number,
     blood:String,
     date:Date,
 })
