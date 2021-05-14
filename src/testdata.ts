@@ -15,8 +15,8 @@ import {
 import faker from "faker";
 export const populateVolunteer = async () => {
   await Volunteer.deleteMany({});
-  let volunteers = [];
-  for (let i = 0; i <= 20; i++) {
+  let volunteers: Array<IVolunteer> = [];
+  for (let i = 0; i <= 50; i++) {
     const firstname = faker.name.firstName();
     const lastname = faker.name.lastName();
     let bool1 = faker.datatype.boolean();
@@ -29,7 +29,7 @@ export const populateVolunteer = async () => {
         bool1 = true;
       }
     }
-    let newVolunteer = {
+    let newVolunteer = new Volunteer({
       email: faker.internet.email(firstname, lastname),
       name: `${firstname} ${lastname}`,
       contact: faker.phone.phoneNumber(),
@@ -38,7 +38,7 @@ export const populateVolunteer = async () => {
       state: faker.address.state(),
       verified: bool1,
       status: bool2,
-    };
+    });
     volunteers.push(newVolunteer);
   }
   await Volunteer.insertMany(volunteers);
@@ -51,7 +51,7 @@ export const populateDb = async (done?: Function) => {
     let oxygen = [];
     let donors = [];
     let medicines = [];
-    for (let i = 0; i <= 20; i++) {
+    for (let i = 0; i <= 100; i++) {
       const firstname = faker.name.firstName();
       const lastname = faker.name.lastName();
       const firstname1 = faker.name.firstName();

@@ -19,11 +19,11 @@ export default async (req: Request, res: AppResponse) => {
 
     if (req.query.name)
       patient = await Patient.find({
-        name: `${req.query.name}`,
+        name: { $regex: `${req.query.name}` },
         verified: req.query.verified === "true",
       });
     else
-     patient = await Patient.find({
+      patient = await Patient.find({
         verified: req.query.verified === "true",
       });
     const count = patient.length;

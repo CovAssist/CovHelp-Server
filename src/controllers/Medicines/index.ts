@@ -1,2 +1,3 @@
-import MedicineList from './MedicinesLists';
-export default {MedicineList};
+import MedicineList from "./MedicinesLists";
+import MedicineCreate from "./MedicineCreate";
+export default { MedicineList, MedicineCreate };

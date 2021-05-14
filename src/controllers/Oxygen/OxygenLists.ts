@@ -19,7 +19,7 @@ export default async (req: Request, res: AppResponse) => {
 
     if (req.query.name)
       oxygen = await Oxygen.find({
-        city: `${req.query.city}`,
+        city: { $regex: `${req.query.city}` },
         verified: req.query.verified === "true",
       });
     else
