@@ -12,7 +12,6 @@ app.use(express.urlencoded({ limit: "50mb", extended: true }));
 app.use("/api", routes);
 const start = async () => {
   await connect();
-  await populateDb();
   app.get("/", (req, res) => {
     res.send("Hello World");
   });
