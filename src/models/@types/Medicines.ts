@@ -6,6 +6,7 @@ export default interface IMedicines extends Document {
   city: string;
   state: string;
   verified: boolean;
+  status: boolean;
   price: number;
   verificationTime: string;
   verifiedBy: string;

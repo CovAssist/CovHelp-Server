@@ -9,5 +9,6 @@ export default interface IPatient extends Document {
   state: string;
   hospital: string;
   verified: boolean;
+  status: boolean;
   report: string;
 }

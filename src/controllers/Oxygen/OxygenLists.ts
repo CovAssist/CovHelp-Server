@@ -7,7 +7,11 @@ export default async (req: Request, res: AppResponse) => {
       message: "Please provide verification status",
       error: true,
     });
-
+  if (req.query.status === undefined)
+    return res.status(400).json({
+      message: "Please provide query status",
+      error: true,
+    });
   if (!req.query.start && !req.query.end)
     return res.status(400).json({
       message: "Please provide start and end parameters in query string",
@@ -21,10 +25,12 @@ export default async (req: Request, res: AppResponse) => {
       oxygen = await Oxygen.find({
         city: { $regex: `${req.query.city}` },
         verified: req.query.verified === "true",
+        status: req.query.status === "true",
       });
     else
       oxygen = await Oxygen.find({
         verified: req.query.verified === "true",
+        status: req.query.status === "true",
       });
     const count = oxygen.length;
     const start = parseInt(req.query.start as string);

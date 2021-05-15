@@ -10,6 +10,7 @@ const PatientSchema: Schema = new Schema({
   state: String,
   hospital: String,
   verified: Boolean,
+  status: Boolean,
   report: String,
 });
 
