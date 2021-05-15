@@ -3,12 +3,6 @@ import { AppResponse } from "../../@types";
 import { Donor, IDonor } from "../../models";
 
 export default async (req: Request, res: AppResponse) => {
-  if (req.query.verified === undefined)
-    return res.status(400).json({
-      message: "Please provide verification status",
-      error: true,
-    });
-
   if (!req.query.start && !req.query.end)
     return res.status(400).json({
       message: "Please provide start and end parameters in query string",
@@ -17,16 +11,11 @@ export default async (req: Request, res: AppResponse) => {
 
   try {
     let donors: Array<IDonor> = [];
-
-    if (req.query.name)
-        donors = await Donor.find({
-        name: `${req.query.name}`,
-        verified: req.query.verified === "true",
-      });
-    else
+    if (req.query.blood)
       donors = await Donor.find({
-        verified: req.query.verified === "true",
+        blood: { $regex: `${req.query.blood}` },
       });
+    else donors = await Donor.find({});
     const count = donors.length;
     const start = parseInt(req.query.start as string);
     const end = parseInt(req.query.end as string);

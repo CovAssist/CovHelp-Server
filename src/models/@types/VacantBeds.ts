@@ -7,6 +7,7 @@ export default interface IVacantBeds extends Document {
   hoscity: string;
   state: string;
   verified: boolean;
+  status: boolean;
   hosFees: number;
   verificationTime: string;
   verifiedBy: string;

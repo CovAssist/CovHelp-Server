@@ -6,7 +6,8 @@ export default async (req: Request, res: AppResponse) => {
     if (req.body && req.body.id) {
       const volunteer = await Volunteer.findOne({ _id: req.body.id });
       if (volunteer) {
-        volunteer.status = !volunteer.status;
+        volunteer[req.query.verified ? "verified" : "status"] =
+          !volunteer[req.query.verified ? "verified" : "status"];
         await volunteer.save();
         res.status(200).json({ success: true, message: "Volunteer updated" });
       } else {

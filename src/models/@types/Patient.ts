@@ -6,7 +6,9 @@ export default interface IPatient extends Document {
   contact: string;
   name: string;
   hospitalcity: string;
+  state: string;
   hospital: string;
   verified: boolean;
+  status: boolean;
   report: string;
 }

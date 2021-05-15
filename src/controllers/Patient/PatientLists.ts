@@ -7,7 +7,11 @@ export default async (req: Request, res: AppResponse) => {
       message: "Please provide verification status",
       error: true,
     });
-
+  if (req.query.status === undefined)
+    return res.status(400).json({
+      message: "Please provide query status",
+      error: true,
+    });
   if (!req.query.start && !req.query.end)
     return res.status(400).json({
       message: "Please provide start and end parameters in query string",
@@ -19,12 +23,14 @@ export default async (req: Request, res: AppResponse) => {
 
     if (req.query.name)
       patient = await Patient.find({
-        name: `${req.query.name}`,
+        name: { $regex: `${req.query.name}` },
         verified: req.query.verified === "true",
+        status: req.query.status === "true",
       });
     else
-     patient = await Patient.find({
+      patient = await Patient.find({
         verified: req.query.verified === "true",
+        status: req.query.status === "true",
       });
     const count = patient.length;
     const start = parseInt(req.query.start as string);

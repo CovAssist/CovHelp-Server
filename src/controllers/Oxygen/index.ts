@@ -1,2 +1,3 @@
-import OxygenList from './OxygenLists';
-export default {OxygenList};
+import OxygenList from "./OxygenLists";
+import OxygenCreate from "./OxygenCreate";
+export default { OxygenList, OxygenCreate };

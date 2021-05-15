@@ -4,7 +4,7 @@
   "description": "",
   "main": "build/index.ts",
   "scripts": {
-    "test": "ts-mocha -r dotenv/config 'src/**/*.test.ts' --exit --timeout 5000",
+    "test": "export NODE_ENV=test && ts-mocha 'src/**/*.test.ts' --exit",
     "dev": "nodemon -r dotenv/config src/index.ts",
     "start": "ts-node src/index.ts",
     "build": "tsc"

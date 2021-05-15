@@ -7,6 +7,11 @@ export default async (req: Request, res: AppResponse) => {
       message: "Please provide verification status",
       error: true,
     });
+  if (req.query.status === undefined)
+    return res.status(400).json({
+      message: "Please provide query status",
+      error: true,
+    });
 
   if (!req.query.start && !req.query.end)
     return res.status(400).json({
@@ -19,12 +24,14 @@ export default async (req: Request, res: AppResponse) => {
 
     if (req.query.name)
       medicines = await Medicine.find({
-        name: `${req.query.name}`,
+        name: { $regex: `${req.query.name}` },
         verified: req.query.verified === "true",
+        status: req.query.status === "true",
       });
     else
       medicines = await Medicine.find({
         verified: req.query.verified === "true",
+        status: req.query.status === "true",
       });
     const count = medicines.length;
     const start = parseInt(req.query.start as string);
