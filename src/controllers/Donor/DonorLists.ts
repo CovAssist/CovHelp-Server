@@ -13,7 +13,7 @@ export default async (req: Request, res: AppResponse) => {
     let donors: Array<IDonor> = [];
     if (req.query.blood)
       donors = await Donor.find({
-        blood: { $regex: `${req.query.blood}` },
+        blood: { $regex: `${req.query.blood}`, $options: "i" },
       });
     else donors = await Donor.find({});
     const count = donors.length;

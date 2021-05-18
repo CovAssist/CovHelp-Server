@@ -22,7 +22,7 @@ export default async (req: Request, res: AppResponse) => {
     let beds: Array<IVacantBeds> = [];
     if (req.query.hoscity)
       beds = await VacantBeds.find({
-        hoscity: { $regex: `${req.query.hoscity}` },
+        hoscity: { $regex: `${req.query.hoscity}`, $options: "i" },
         verified: req.query.verified === "true",
         status: req.query.status === "true",
       });

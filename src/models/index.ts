@@ -4,6 +4,7 @@ export { default as Patient } from "./Patient";
 export { default as VacantBeds } from "./VacantBeds";
 export { default as Oxygen } from "./Oxygen";
 export { default as Medicine } from "./Medicines";
+export { default as UserAuth } from "./User";
 export {
   IVolunteer,
   IDonor,
@@ -11,4 +12,5 @@ export {
   IOxygen,
   IPatient,
   IVacantBeds,
+  IUserAuth,
 } from "./@types";

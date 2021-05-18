@@ -1,3 +1,4 @@
 import OxygenList from "./OxygenLists";
 import OxygenCreate from "./OxygenCreate";
-export default { OxygenList, OxygenCreate };
+import ChangeStatus from "./ChangeStatus";
+export default { OxygenList, OxygenCreate, ChangeStatus };

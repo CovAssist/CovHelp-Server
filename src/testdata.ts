@@ -132,6 +132,7 @@ export const populateDb = async (done?: Function) => {
           hoscity: faker.address.city(),
           state: faker.address.state(),
           verified: bool1,
+          status: bool2,
           hosFees: faker.finance.amount(),
           verificationTime: faker.date.recent(),
           verifiedBy: faker.datatype.string(),

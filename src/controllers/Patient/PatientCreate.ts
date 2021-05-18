@@ -3,12 +3,15 @@ import { AppResponse } from "../../@types";
 import { Patient } from "../../models";
 export default async (req: Request, res: AppResponse) => {
   if (req.query.verified === undefined) {
+    console.log(req.query);
+
     return res
       .status(404)
       .json({ error: true, message: "Provide query string verified " });
   }
   try {
     req.body.data.verified = req.query.verified == "true";
+    req.body.data.status = true;
     const patient = await Patient.create(req.body.data);
     return res
       .status(200)

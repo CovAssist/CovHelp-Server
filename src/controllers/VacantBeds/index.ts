@@ -1,3 +1,4 @@
 import VacantBedsList from "./VacantBedsLists";
 import VacantBedsCreate from "./VacantBedsCreate";
-export default { VacantBedsList, VacantBedsCreate };
+import ChangeStatus from "./ChangeStatus";
+export default { VacantBedsList, VacantBedsCreate, ChangeStatus };

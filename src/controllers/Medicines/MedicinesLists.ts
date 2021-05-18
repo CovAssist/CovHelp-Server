@@ -24,7 +24,7 @@ export default async (req: Request, res: AppResponse) => {
 
     if (req.query.name)
       medicines = await Medicine.find({
-        name: { $regex: `${req.query.name}` },
+        name: { $regex: `${req.query.name}`, $options: "i" },
         verified: req.query.verified === "true",
         status: req.query.status === "true",
       });
