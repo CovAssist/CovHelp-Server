@@ -22,7 +22,11 @@ export default async (req: Request, res: AppResponse) => {
           { expiresIn: "48h" }
         );
         return res
-          .cookie("token", token, { maxAge: 172800000, httpOnly: true })
+          .cookie("token", token, {
+            maxAge: 172800000,
+            httpOnly: true,
+            sameSite: "none",
+          })
           .status(200)
           .json({ success: true, message: "Logged In" });
       }
