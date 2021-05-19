@@ -9,7 +9,7 @@ import { connect } from "./db";
 import { populateDb, emptyDb } from "./testdata";
 const url =
   process.env.NODE_ENV === "production"
-    ? "https://cov-help-admin.vercel.app/"
+    ? "https://cov-help-admin.vercel.app"
     : "http://localhost:3000";
 app.use(cors({ credentials: true, origin: url }));
 app.use(cookieParser());
