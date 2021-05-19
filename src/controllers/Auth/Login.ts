@@ -25,6 +25,7 @@ export default async (req: Request, res: AppResponse) => {
           .cookie("token", token, {
             maxAge: 172800000,
             httpOnly: true,
+            secure: true,
             sameSite: "none",
           })
           .status(200)
