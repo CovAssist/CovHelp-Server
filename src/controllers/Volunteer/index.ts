@@ -1,3 +1,4 @@
 import VolunteerList from "./VolunteerLists";
 import ChangeStatus from "./ChangeStatus";
-export default { VolunteerList, ChangeStatus };
+import VolunteerCreate from "./CreateVolunteer";
+export default { VolunteerList, ChangeStatus, VolunteerCreate };
