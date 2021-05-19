@@ -7,7 +7,11 @@ const app = express();
 import routes from "./routes";
 import { connect } from "./db";
 import { populateDb, emptyDb } from "./testdata";
-app.use(cors({ credentials: true, origin: "http://localhost:3000" }));
+const url =
+  process.env.NODE_ENV === "production"
+    ? "https://cov-help-admin.vercel.app/"
+    : "http://localhost:3000";
+app.use(cors({ credentials: true, origin: url }));
 app.use(cookieParser());
 app.use(express.json({ limit: "50mb" }));
 app.use(express.urlencoded({ limit: "100mb", extended: true }));
