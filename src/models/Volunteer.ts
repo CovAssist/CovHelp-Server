@@ -10,6 +10,7 @@ const VolunteerSchema: Schema = new Schema({
   state: String,
   verified: Boolean, //for new registrations
   status: Boolean, //it will be false for the volunteerss who left
+  description: String,
 });
 
 const User: Model<IVolunteer> = model("Volunteer", VolunteerSchema);

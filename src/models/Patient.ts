@@ -2,8 +2,14 @@ import { model, Schema, Model } from "mongoose";
 import { IPatient } from "./@types";
 
 const PatientSchema: Schema = new Schema({
-  email: String,
-  dob: Date,
+  bloodGroup: String,
+  requirement: String,
+  oxygenLevel: String,
+  attenderName: String,
+  volunteerAssigned: String,
+  followUp: String,
+  remarks: String,
+  age: Number,
   contact: String,
   name: String,
   hospitalcity: String,
@@ -12,6 +18,7 @@ const PatientSchema: Schema = new Schema({
   verified: Boolean,
   status: Boolean,
   report: String,
+  description: String,
 });
 
 const Patient: Model<IPatient> = model("Patient", PatientSchema);

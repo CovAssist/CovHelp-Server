@@ -2,7 +2,8 @@ import { model, Schema, Model } from "mongoose";
 import { IMedicines } from "./@types";
 
 const MedicinesSchema: Schema = new Schema({
-  name: String,
+  medName: String,
+  supplierName: String,
   supplierContact: String,
   city: String,
   state: String,
@@ -12,6 +13,7 @@ const MedicinesSchema: Schema = new Schema({
   verificationTime: String,
   verifiedBy: String,
   delivery: Boolean,
+  description: String,
 });
 
 const Medicines: Model<IMedicines> = model("Medicines", MedicinesSchema);

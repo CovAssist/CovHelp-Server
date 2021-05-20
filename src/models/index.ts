@@ -5,6 +5,7 @@ export { default as VacantBeds } from "./VacantBeds";
 export { default as Oxygen } from "./Oxygen";
 export { default as Medicine } from "./Medicines";
 export { default as UserAuth } from "./User";
+export { default as Ambulance } from "./Ambulance";
 export {
   IVolunteer,
   IDonor,

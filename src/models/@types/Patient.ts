@@ -1,8 +1,14 @@
 import { Document } from "mongoose";
 
 export default interface IPatient extends Document {
-  email: string;
-  dob: string;
+  bloodGroup: string;
+  requirement: string;
+  oxygenLevel: string;
+  attenderName: string;
+  volunteerAssigned: string;
+  followUp: string;
+  remarks: string;
+  age: number;
   contact: string;
   name: string;
   hospitalcity: string;
@@ -11,4 +17,5 @@ export default interface IPatient extends Document {
   verified: boolean;
   status: boolean;
   report: string;
+  description: string;
 }

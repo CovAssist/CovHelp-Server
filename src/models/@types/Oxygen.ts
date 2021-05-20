@@ -1,7 +1,7 @@
 import { Document } from "mongoose";
 
 export default interface IOxygen extends Document {
-  supplierName:string;
+  supplierName: string;
   supplierContact: string;
   city: string;
   state: string;
@@ -11,4 +11,5 @@ export default interface IOxygen extends Document {
   verificationTime: string;
   verifiedBy: string;
   delivery: boolean;
+  description: string;
 }

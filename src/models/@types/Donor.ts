@@ -9,4 +9,5 @@ export default interface IDonor extends Document {
   recovered: number;
   blood: string;
   date: string;
+  description: string;
 }

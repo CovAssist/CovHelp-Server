@@ -12,6 +12,7 @@ const VacantBedsSchema: Schema = new Schema({
   hosFees: Number,
   verificationTime: String,
   verifiedBy: String,
+  description: String,
 });
 
 const VacantBeds: Model<IVacantBeds> = model("VacantBeds", VacantBedsSchema);

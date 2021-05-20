@@ -5,3 +5,4 @@ export { default as IVacantBeds } from "./VacantBeds";
 export { default as IOxygen } from "./Oxygen";
 export { default as IMedicines } from "./Medicines";
 export { default as IUserAuth } from "./User";
+export { default as IAmbulance } from "./Ambulance";

@@ -8,4 +8,5 @@ export default interface IVolunteer extends Document {
   state: string;
   verified: boolean;
   status: boolean;
+  description: string;
 }

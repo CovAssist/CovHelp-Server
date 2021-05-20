@@ -1,2 +1,8 @@
 /node_modules
 .env
+src/populate.ts
+src/ambulance.ts
+src/beds.ts
+src/medicine.ts
+src/oxygen.ts
+src/patient.ts
