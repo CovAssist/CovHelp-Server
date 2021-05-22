@@ -16,6 +16,6 @@ export default interface IPatient extends Document {
   hospital: string;
   verified: boolean;
   status: boolean;
-  report: string;
+  dateOfPositive: string;
   description: string;
 }

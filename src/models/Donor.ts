@@ -2,8 +2,7 @@ import { model, Schema, Model } from "mongoose";
 import { IDonor } from "./@types";
 
 const DonorSchema: Schema = new Schema({
-  email: String,
-  dob: Date,
+  age: Number,
   contact: String,
   name: String,
   city: String,
@@ -11,6 +10,7 @@ const DonorSchema: Schema = new Schema({
   recovered: Number,
   blood: String,
   date: Date,
+  lastDonation: String, //days or months since last donation
   description: String,
 });
 

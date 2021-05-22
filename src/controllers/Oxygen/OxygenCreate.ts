@@ -10,7 +10,7 @@ export default async (req: Request, res: AppResponse) => {
   try {
     req.body.data.verified = req.query.verified == "true";
     req.body.data.status = true;
-    req.body.data.verificationTime = new Date();
+    req.body.data.verificationTime = Date.now();
     const oxygen = await Oxygen.create(req.body.data);
     return res
       .status(200)

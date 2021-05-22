@@ -8,9 +8,7 @@ export default interface IMedicines extends Document {
   state: string;
   verified: boolean;
   status: boolean;
-  price: number;
   verificationTime: string;
-  verifiedBy: string;
   delivery: boolean;
   description: string;
 }

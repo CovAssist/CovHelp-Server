@@ -4,8 +4,6 @@ import { UserAuth, IUserAuth } from "../../models";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 export default async (req: Request, res: AppResponse) => {
-  console.log(req.body);
-
   if (!req.body.username || !req.body.password) {
     return res
       .status(400)

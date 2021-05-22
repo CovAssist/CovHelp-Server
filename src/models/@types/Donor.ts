@@ -1,7 +1,6 @@
 import { Document } from "mongoose";
 export default interface IDonor extends Document {
-  email: string;
-  dob: string;
+  age: number;
   contact: string;
   name: string;
   city: string;
@@ -9,5 +8,6 @@ export default interface IDonor extends Document {
   recovered: number;
   blood: string;
   date: string;
+  lastDonation: string;
   description: string;
 }

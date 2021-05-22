@@ -20,8 +20,7 @@ export default async (req: Request, res: AppResponse) => {
 
   try {
     let oxygen: Array<IOxygen> = [];
-
-    if (req.query.name)
+    if (req.query.city)
       oxygen = await Oxygen.find({
         city: { $regex: `${req.query.city}`, $options: "i" },
         verified: req.query.verified === "true",

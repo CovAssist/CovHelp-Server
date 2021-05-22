@@ -8,9 +8,7 @@ const OxygenSchema: Schema = new Schema({
   state: String,
   verified: Boolean,
   status: Boolean,
-  price: Number,
   verificationTime: String,
-  verifiedBy: String,
   delivery: Boolean,
   description: String,
 });
