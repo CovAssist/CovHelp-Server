@@ -10,8 +10,6 @@ export default async (req: Request, res: AppResponse) => {
       .json({ error: true, message: "Provide query string verified " });
   }
   try {
-    console.log(req.body);
-
     req.body.verified = req.query.verified == "true";
     req.body.status = true;
     const patient = await Volunteer.create(req.body);

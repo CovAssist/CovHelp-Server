@@ -12,6 +12,7 @@ app.use((req, res, next) => {
     "https://covi-help-client.vercel.app",
     "https://cov-help-admin.vercel.app",
     "http://localhost:3000",
+    "https://aaravforcovid.vercel.app",
   ];
   const origin = req.headers.origin ? req.headers.origin : "";
   if (allowedOrigins.includes(origin)) {

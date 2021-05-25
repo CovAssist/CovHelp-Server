@@ -5,7 +5,8 @@ const VolunteerSchema: Schema = new Schema({
   email: String,
   name: String,
   contact: String,
-  dob: Date,
+  age: String,
+  gender: String,
   city: String,
   state: String,
   verified: Boolean, //for new registrations

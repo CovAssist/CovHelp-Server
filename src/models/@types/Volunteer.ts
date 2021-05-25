@@ -1,7 +1,8 @@
 import { Document } from "mongoose";
 export default interface IVolunteer extends Document {
   email: string;
-  dob: string;
+  age: string;
+  gender: string;
   contact: string;
   name: string;
   city: string;
